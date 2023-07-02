@@ -1,20 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import backgroundImage from "../images/botw_box_art.jpeg";
 
 const Container = styled.main`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 `;
 
 const Heading = styled.h1`
   font-size: 24px;
-  color: #333;
+  color: #FFFFFF;
   margin-bottom: 20px;
 `;
 
 const Paragraph = styled.p`
-  color: #555;
+  color: #FFFFFF;
   margin-bottom: 10px;
 `;
 
