@@ -1,11 +1,31 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
-const Container=``;
-const Image=``;
-const Heading=``;
-const Paragraph=``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
 
+const Image = styled.img`
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+`;
+
+const Heading = styled.h2`
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+`;
+
+const Paragraph = styled.p`
+  color: #555;
+  margin-bottom: 10px;
+`;
 
 function MonsterStats({ data }) {
   const { id } = useParams();
