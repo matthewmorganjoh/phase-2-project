@@ -12,7 +12,8 @@ function MonsterStats({ data }) {
         <div>
           <h2>{monster.name}</h2>
           <img src={monster.image} alt={monster.name} />
-          <p>Stats: {monster.stats}</p>
+          <p>Description: {monster.description}</p>
+          <p>Common Locations: {monster.common_locations}</p>
         </div>
       ) : (
         <p>Monster not found</p>
