@@ -6,13 +6,14 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  padding: 5px;
 `;
 
 const NavItem = styled(NavLink)`
   display: inline-block;
   padding: 12px;
   margin: 0 6px 6px;
-  background-color: blue;
+  background-color: gold;
   text-decoration: none;
   color: white;
   border-radius: 4px;

@@ -24,7 +24,7 @@ const Image = styled.img`
 const Heading = styled.h2`
   font-size: 28px;
   color: #FFFFFF;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 `;
 
 const Paragraph = styled.p`

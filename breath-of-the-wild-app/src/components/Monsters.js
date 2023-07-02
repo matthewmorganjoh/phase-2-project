@@ -20,10 +20,17 @@ const Image = styled.img`
   border-radius: 4px;
 `;
 
+const MonsterName = styled.p`
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-transform: capitalize;
+`;
+
 function Monsters({ data }) {
   return (
     <div>
-      <h1>Monsters</h1>
+      <h1 style={{ color: "white" }}>Monsters</h1>
       <GridContainer>
         {data && data.length > 0 ? (
           data.map((monster, i) => (
@@ -31,7 +38,7 @@ function Monsters({ data }) {
               <Link to={`/monsters/${monster.id}`}>
                 <Image src={monster.image} alt={monster.name} />
               </Link>
-              <p>{monster.name}</p>
+              <MonsterName>{monster.name}</MonsterName>
             </GridItem>
           ))
         ) : (
