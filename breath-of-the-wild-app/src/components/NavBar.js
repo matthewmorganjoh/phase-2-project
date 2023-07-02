@@ -13,18 +13,18 @@ const NavItem = styled(NavLink)`
   display: inline-block;
   padding: 12px;
   margin: 0 6px 6px;
-  background-color: gold;
+  background-color: #d9a432;
   text-decoration: none;
   color: white;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darkblue;
+    background-color: #ba8d04;
   }
 
   &.active {
-    background-color: darkblue;
+    background-color: #ba8d04;
   }
 `;
 
