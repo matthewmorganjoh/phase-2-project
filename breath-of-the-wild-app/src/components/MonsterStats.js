@@ -1,16 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import backgroundImage from "../images/texture.jpeg";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 `;
 
 const Image = styled.img`
-  width: 200px;
+  width: 300px;
   height: auto;
   margin-bottom: 10px;
   border-radius: 4px;
@@ -18,14 +23,14 @@ const Image = styled.img`
 
 const Heading = styled.h2`
   font-size: 28px;
-  color: #333;
+  color: #FFFFFF;
   margin-bottom: 10px;
 `;
 
 const Paragraph = styled.p`
-  color: #555;
-  margin-bottom: 10px;
-  padding: 0 100px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  padding: 0 300px;
 `;
 
 function MonsterStats({ data }) {
@@ -37,7 +42,7 @@ function MonsterStats({ data }) {
     <Container>
       {monster ? (
         <>
-          <Heading>{monster.name}</Heading>
+          <Heading>{monster.name.toUpperCase()}</Heading>
           <Image src={monster.image} alt={monster.name} />
           <Paragraph>Description: {monster.description}</Paragraph>
           <Paragraph>
