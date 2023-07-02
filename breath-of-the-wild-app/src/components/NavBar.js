@@ -1,55 +1,57 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
-const navStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
+const NavContainer = styled.nav`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+`;
 
-const linkStyles = {
-  display: "inline-block",
-  width: "60px",
-  padding: "12px",
-  margin: "0 6px 6px",
-  background: "blue",
-  textDecoration: "none",
-  color: "white",
-};
+const NavItem = styled(NavLink)`
+  display: inline-block;
+  padding: 12px;
+  margin: 0 6px 6px;
+  background-color: blue;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darkblue;
+  }
+
+  &.active {
+    background-color: darkblue;
+  }
+`;
 
 function NavBar() {
   return (
-    <div style={navStyles}>
-      <NavLink
+    <NavContainer>
+      <NavItem
         to="/"
         exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
+        activeClassName="active"
       >
         Home
-      </NavLink>
-      <NavLink
+      </NavItem>
+      <NavItem
         to="/monsters"
         exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
+        activeClassName="active"
       >
         Monsters
-      </NavLink>
-      <NavLink
+      </NavItem>
+      <NavItem
         to="/login"
         exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
+        activeClassName="active"
       >
         Login
-      </NavLink>
-    </div>
+      </NavItem>
+    </NavContainer>
   );
 }
 
