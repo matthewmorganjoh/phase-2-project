@@ -4,8 +4,7 @@ import { useParams } from "react-router-dom";
 function MonsterStats({ data }) {
   const { id } = useParams();
 
-  // Find the monster based on the id parameter
-  const monster = data.find((monster) => monster.id === id);
+  const monster = data.find((monster) => monster.id.toString() === id);
 
   return (
     <div>
