@@ -46,11 +46,11 @@ function NavBar() {
         Monsters
       </NavItem>
       <NavItem
-        to="/login"
+        to="/request"
         exact
         activeClassName="active"
       >
-        Login
+        Request
       </NavItem>
     </NavContainer>
   );

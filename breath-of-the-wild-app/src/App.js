@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Monsters from "./components/Monsters";
 import MonsterStats from "./components/MonsterStats";
+import Request from "./components/Request";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/request">
+              <Request />
             </Route>
           </Switch>
         </div>
