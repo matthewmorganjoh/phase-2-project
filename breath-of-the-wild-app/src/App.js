@@ -14,8 +14,7 @@ function App() {
     fetch("https://botw-compendium.herokuapp.com/api/v3/compendium/category/monsters")
       .then((res) => res.json())
       .then((response) => {
-        console.log(response.data); // Print data to console
-        // If response.data is an array, directly set it to state
+        console.log(response.data);
         if (Array.isArray(response.data)) {
           setMonsters(response.data);
         }
