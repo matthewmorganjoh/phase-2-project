@@ -29,7 +29,7 @@ const Heading = styled.h2`
 
 const Paragraph = styled.p`
   color: #FFFFFF;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   padding: 0 300px;
 `;
 
@@ -44,9 +44,11 @@ function MonsterStats({ data }) {
         <>
           <Heading>{monster.name.toUpperCase()}</Heading>
           <Image src={monster.image} alt={monster.name} />
-          <Paragraph>Description: {monster.description}</Paragraph>
+          <Heading>Description</Heading>
+          <Paragraph>{monster.description}</Paragraph>
+          <Heading>Common Locations</Heading>
           <Paragraph>
-            Common Locations:{" "}
+            {" "}
             {monster.common_locations &&
             monster.common_locations.length > 1
               ? monster.common_locations.join(", ")

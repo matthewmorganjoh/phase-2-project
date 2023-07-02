@@ -6,6 +6,15 @@ import Monsters from "./components/Monsters";
 import MonsterStats from "./components/MonsterStats";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import styled from "styled-components";
+import backgroundImage from "./images/texture.jpeg";
+
+const AppContainer = styled.div`
+  background-image: url(${backgroundImage});
+  background-size: contain;
+  background-repeat: repeat;
+  min-height: 100vh;
+`;
 
 function App() {
   const [monsters, setMonsters] = useState([]);
@@ -25,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app-container">
+    <AppContainer>
       <Router>
         <NavBar />
         <div className="content-container">
@@ -42,7 +51,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </div>
+    </AppContainer>
   );
 }
 
