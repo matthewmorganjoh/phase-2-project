@@ -13,7 +13,7 @@ function MonsterStats({ data }) {
           <h2>{monster.name}</h2>
           <img src={monster.image} alt={monster.name} />
           <p>Description: {monster.description}</p>
-          <p>Common Locations: {monster.common_locations.join(", ")}</p>
+          <p>Common Locations: {monster.common_locations && monster.common_locations.length > 1 ? monster.common_locations.join(", ") : monster.common_locations}</p>
         </div>
       ) : (
         <p>Monster not found</p>
