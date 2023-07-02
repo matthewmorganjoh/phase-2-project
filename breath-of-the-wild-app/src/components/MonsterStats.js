@@ -25,6 +25,7 @@ const Heading = styled.h2`
 const Paragraph = styled.p`
   color: #555;
   margin-bottom: 10px;
+  padding: 0 100px;
 `;
 
 function MonsterStats({ data }) {
