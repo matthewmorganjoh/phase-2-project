@@ -54,9 +54,16 @@ const SubmitButton = styled.button`
   cursor: pointer;
 `;
 
+const SuccessMessage = styled.p`
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+`;
+
 const Request = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -64,6 +71,7 @@ const Request = () => {
     console.log("Description:", description);
     setName("");
     setDescription("");
+    setIsSubmitted(true);
   };
 
   return (
@@ -91,6 +99,7 @@ const Request = () => {
         </FormField>
         <SubmitButton type="submit">Submit Request</SubmitButton>
       </Form>
+      {isSubmitted && <SuccessMessage>Your request has been recorded!</SuccessMessage>}
     </FormContainer>
   );
 };
