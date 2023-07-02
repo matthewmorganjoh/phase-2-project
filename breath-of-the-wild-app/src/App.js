@@ -23,17 +23,19 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="app-container">
       <Router>
         <NavBar />
-        <Switch>
-          <Route exact path="/monsters">
-            <Monsters data={monsters} />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <div className="content-container">
+          <Switch>
+            <Route exact path="/monsters">
+              <Monsters data={monsters} />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </Router>
     </div>
   );
