@@ -1,6 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+const navStyles = {
+  display: "flex",
+  justifyContent: "center",
+};
+
 const linkStyles = {
   display: "inline-block",
   width: "60px",
@@ -13,7 +18,7 @@ const linkStyles = {
 
 function NavBar() {
   return (
-    <div>
+    <div style={navStyles}>
       <NavLink
         to="/"
         exact

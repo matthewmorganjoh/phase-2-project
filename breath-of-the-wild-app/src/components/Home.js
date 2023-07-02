@@ -28,7 +28,9 @@ function Home() {
     <Container>
       <Heading>Welcome to the Home Page!</Heading>
       <Paragraph>
-        Thank you for visiting. This is the home page of your application.
+        Thank you for visiting.
+        To view all Monsters in the Hyrule Compendium, 
+        click the Monsters button in the navigation bar.
       </Paragraph>
     </Container>
   );
