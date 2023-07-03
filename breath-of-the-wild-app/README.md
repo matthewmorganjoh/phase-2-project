@@ -1,32 +1,46 @@
 # React Monster Compendium
 
-This is a React application that displays information about monsters from the game "The Legend of Zelda: Breath of the Wild". It includes multiple components and utilizes styled-components for styling.
+This is a single page React application that uses styled-components for CSS and the Breath of the Wild Compendium API. It displays a list of monsters and their description, image, and common locations.
 
-## Components
-The application consists of the following:
+## Features
 
-1. `Home`: Renders the home page with a welcome message and a brief description.
-2. `Monsters`: Displays a grid of monster images and names. Clicking on a monster will lead to its detailed stats page.
-3. `MonsterStats`: Shows detailed information about a specific monster, including its name, image, description, and common locations.
-4. `NavBar`: Provides navigation links to the home page, monsters page, and a request page.
-5. `Request`: Allows users to submit a request for a new monster by entering its name and description.
+- Home: A welcome page for users. 
+- Monsters: A grid list of monsters. Each monster image is clickable and routes the user to the individual monster's stats page.
+- MonsterStats: Shows detailed statistics for each monster.
+- Request: A form where users can submit a request for a new monster to be added.
 
-## Installation
+## Structure
 
-To run the application locally, follow these steps:
+The main components are `NavBar`, `Home`, `Monsters`, `MonsterStats`, and `Request`.
 
-1. Clone the repository: `git clone <https://github.com/matthewmorganjoh/phase-2-project.git`>
-2. Navigate to the project directory using cd
-3. Install the dependencies: `npm install`
+`NavBar`: This is the navigation bar at the top of the app. It allows users to navigate between the Home, Monsters, and Request pages.
+`Home`: This is the landing page of the app.
+`Monsters`: This component fetches and displays all the monsters as a list of clickable images.
+`MonsterStats`: This component displays detailed stats for each monster. The monster data is fetched from the Breath of the Wild Compendium API.
+`Request`: This component contains a form that allows users to submit a request for a new monster to be added.
+
+In addition to these, there is the main `App` component that uses React Router to switch between the different pages.
 
 ## Usage
-To start the application, use the following command:
 
+To run the application in development mode, use the following commands:
+
+1. Install all the required packages/dependencies using npm
+```bash
+npm install
 ```
+
+2. Run the app in a development mode
+```bash
 npm start
-
 ```
+3. Open http://localhost:3000 to view it in the browser. The page will reload if you make edits, but only when the local host is active.
 
-This will run the app in development mode and open it in your default browser at [http://localhost:3000](http://localhost:3000/). You can explore the different components and navigate through the app using the provided links.
 
-Note: The application fetches monster data from an external API (https://botw-compendium.herokuapp.com/api/v3/compendium/category/monsters) to populate the `Monsters` component.
+## Contributing
+
+If you'd like to contribute, please fork the repository and make changes as you'd like.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
