@@ -22,6 +22,7 @@ const Heading = styled.h1`
 const Paragraph = styled.p`
   color: #FFFFFF;
   margin-bottom: 10px;
+  padding-right: 350px;
 `;
 
 function Home() {
